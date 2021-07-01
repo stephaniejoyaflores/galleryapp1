@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:galleryapp1"
+             x:Class="galleryapp1.ImagePage"
+             BackgroundColor="Gray">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid VerticalOptions="Start" Margin="10,50,10,0">
+                <Button x:Name="btn1" ImageSource="https://img.icons8.com/metro/52/000000/long-arrow-left.png" 
+                        BackgroundColor="Transparent" HorizontalOptions="Start" 
+                        CornerRadius="100" Clicked="btn1_Clicked"/>
+                <ActivityIndicator IsRunning="{Binding Source={x:Reference image}, Path=IsLoading }" HorizontalOptions="Center" Color="white"/>
+                <Button x:Name="btn2" ImageSource="https://img.icons8.com/metro/52/000000/long-arrow-right.png" 
+                        BackgroundColor="Transparent" HorizontalOptions="End"
+                        CornerRadius="100" Clicked="btn2_Clicked"/>
+            </Grid>
+            <StackLayout Margin="0,150,0,0">
+                <Image x:Name="image" Source="https://wallpaperaccess.com/full/30100.jpg" Aspect="AspectFit"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
